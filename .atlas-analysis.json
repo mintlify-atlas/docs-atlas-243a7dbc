@@ -1,0 +1,128 @@
+{
+  "projectType": "sdk-library",
+  "projectName": "SmolVM",
+  "projectDescription": "Secure microVM runtime for AI agents and tools with hardware-level isolation",
+  "theme": "aspen",
+  "primaryColor": "#FF6B35",
+  "lightColor": "#FFB5A0",
+  "darkColor": "#CC4420",
+  "navigation": {
+    "tabs": [
+      {
+        "tab": "Documentation",
+        "groups": [
+          {
+            "group": "Get Started",
+            "pages": [
+              "introduction",
+              "quickstart",
+              "installation"
+            ]
+          },
+          {
+            "group": "Core Concepts",
+            "pages": [
+              "concepts/overview",
+              "concepts/security",
+              "concepts/backends",
+              "concepts/networking"
+            ]
+          },
+          {
+            "group": "Guides",
+            "pages": [
+              "guides/basic-usage",
+              "guides/vm-lifecycle",
+              "guides/port-forwarding",
+              "guides/environment-variables",
+              "guides/custom-images",
+              "guides/ai-agent-integration"
+            ]
+          },
+          {
+            "group": "CLI Reference",
+            "pages": [
+              "cli/overview",
+              "cli/cleanup",
+              "cli/doctor",
+              "cli/env",
+              "cli/ui"
+            ]
+          },
+          {
+            "group": "Advanced",
+            "pages": [
+              "advanced/performance",
+              "advanced/troubleshooting",
+              "advanced/architecture"
+            ]
+          }
+        ]
+      },
+      {
+        "tab": "API Reference",
+        "groups": [
+          {
+            "group": "Core Classes",
+            "pages": [
+              "api/smolvm",
+              "api/vmconfig",
+              "api/commandresult",
+              "api/vminfo"
+            ]
+          },
+          {
+            "group": "Image Management",
+            "pages": [
+              "api/imagebuilder",
+              "api/imagemanager",
+              "api/imagesource"
+            ]
+          },
+          {
+            "group": "Host & Network",
+            "pages": [
+              "api/hostmanager",
+              "api/networkconfig",
+              "api/sshclient"
+            ]
+          },
+          {
+            "group": "Exceptions",
+            "pages": [
+              "api/exceptions"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "keyFeatures": [
+    "Hardware-level isolation using Firecracker microVMs",
+    "Sub-second VM boot times with minimal overhead",
+    "Python-native SDK with context manager support",
+    "Automatic networking with NAT and port forwarding",
+    "Custom Debian-based rootfs image building",
+    "Cross-platform support (Linux/Firecracker, macOS/QEMU)"
+  ],
+  "publicApiSurface": [
+    "SmolVM",
+    "SmolVM.start()",
+    "SmolVM.stop()",
+    "SmolVM.run()",
+    "SmolVM.from_id()",
+    "SmolVM.expose_local()",
+    "SmolVM.set_env_vars()",
+    "SmolVM.list_env_vars()",
+    "SmolVM.unset_env_vars()",
+    "VMConfig",
+    "VMInfo",
+    "CommandResult",
+    "ImageBuilder",
+    "ImageBuilder.build_debian_ssh_key()",
+    "ImageManager",
+    "HostManager",
+    "SSHClient",
+    "NetworkConfig"
+  ]
+}
