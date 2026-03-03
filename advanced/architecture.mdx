@@ -27,12 +27,16 @@ Firecracker SQLite   nftables   KVM/QEMU
 
 | Component | Responsibility |
 |-----------|---------------|
-| `facade.py` | User-facing SmolVM class with context managers and convenience methods |
-| `vm.py` | Core orchestrator managing VM lifecycle, networking, and state |
+| `facade.py` | User-facing `SmolVM` class with context managers and convenience methods |
+| `vm.py` | Core orchestrator (`SmolVMManager` class) managing VM lifecycle, networking, and state |
 | `api.py` | Low-level Firecracker HTTP API client over Unix sockets |
 | `storage.py` | SQLite-based state persistence for VMs, IPs, and port mappings |
 | `network.py` | Linux networking (TAP devices, NAT, port forwarding via nftables) |
 | `host.py` | Environment validation and Firecracker binary management |
+
+<Note>
+The `SmolVMManager` class in `vm.py` is exported as part of the public API but is primarily for advanced use cases. Most users should use the high-level `SmolVM` facade class instead.
+</Note>
 
 ## Data Flow
 
